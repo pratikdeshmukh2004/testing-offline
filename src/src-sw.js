@@ -63,8 +63,7 @@ registerRoute(
  * Caches at: runtime
  */
 registerRoute(
-  ({url}) => url.origin === 'https://api.themoviedb.org' &&
-    url.pathname.startsWith('/3/discover/tv'),
+  ({url}) => url.origin === "https://navgurukul.github.io",
   new StaleWhileRevalidate({
     cacheName: 'movie-api-response',
     plugins: [

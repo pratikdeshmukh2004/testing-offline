@@ -10,13 +10,14 @@ const Movies = () => {
   useEffect(() => {
     setLoading(true);
 
-    axios.get(`https://api.themoviedb.org/3/discover/tv`, {
+    axios.get(`https://navgurukul.github.io/tarabai-shinde/data/meraki_partners.json`, {
       params: {
         sort_by: 'popularity.desc',
         api_key: process.env.API_KEY
       }
     })
       .then( (response) => {
+        console.log(response);
         setLoading(false);
         setMovies(response?.data?.results);
       })
