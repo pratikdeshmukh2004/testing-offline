@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Router } from "@reach/router";
 
-import Home from "./pages/home";
 import "./styles/style.css";
-import TopPicks from "./pages/top-picks";
 import axios from "axios";
 
 const App = () => {
@@ -27,7 +24,7 @@ const App = () => {
       <h4>Partners</h4>
       <ul>
         {Object.keys(courses).map((c) => (
-          <li>{courses[c].Name}</li>
+          <li key={c}>{courses[c].Name}</li>
         ))}
       </ul>
     </>

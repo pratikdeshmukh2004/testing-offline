@@ -15,10 +15,8 @@ const webpackPlugins = [
   } ),
   new CopyPlugin( {
     patterns: [
-      { from: './src/favicon.ico', to: '' },
+      { from: './src/favicon.png', to: '' },
       { from: './src/manifest.json', to: '' },
-      { from: './src/logo192.png', to: '' },
-      { from: './src/logo512.png', to: '' },
     ],
   } ),
 ];
