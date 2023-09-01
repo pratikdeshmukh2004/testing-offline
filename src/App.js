@@ -9,7 +9,7 @@ const App = () => {
   useEffect(() => {
     axios
       .get(
-        `https://navgurukul.github.io/tarabai-shinde/data/meraki_partners.json`
+        `https://pratikdeshmukh2004.github.io/testing-offline/data/courses.json`
       )
       .then((response) => {
         console.log(response);
@@ -21,10 +21,10 @@ const App = () => {
   }, []);
   return (
     <>
-      <h4>Partners</h4>
+      <h4>Courses</h4>
       <ul>
-        {Object.keys(courses).map((c) => (
-          <li key={c}>{courses[c].Name}</li>
+        {courses.map((c) => (
+          <li key={c.id}>{c.name}</li>
         ))}
       </ul>
     </>
